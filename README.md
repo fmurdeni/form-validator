@@ -31,6 +31,29 @@ Contoh Penggunaan pada Form:
 </form>
 
 ```
+
+## Contoh:
+```sh
+// Example usage of FormValidator
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize form validator
+    const form = document.getElementById('myForm');
+    if (form) {
+        const validator = new FormValidator(form, {
+            // Optional callbacks
+            onSuccess: (form) => {
+                console.log('Form is valid, proceeding with submission');
+                // Proceed with form submission
+                form.submit();
+            },
+            onError: (form) => {
+                console.log('Form validation failed');
+            }
+        });
+    }
+});
+```
+
 Fitur-fitur Validasi yang Tersedia:
 - required: Field wajib diisi
 - email: Validasi format email
